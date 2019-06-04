@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<style>
+		html{
+			height: 100%
+		}
+		body{
+			height: 100%
+		}
+	</style>
+</head>
+<body>
+	
+	<div style=" width: 1000px; margin-left: auto; margin-right: auto; margin-top: 200px;" class="step1">
+		
+		
+
+			<img src="door3.jpg" style="margin-right: 50px; width: 300px;"  alt="" class="door1">
+			
+	
+			<img src="door2.png" style="margin-right: 50px; width: 200px;"  alt="" class="door2">
+	
+			<img src="door3.png" style="margin-right: 50px; width: 200px;"  alt="" class="door3">
+	
+	</div>
+
+	<div class="starvstheforcesofevil" style="background-image: url(star2.jpg); display: none; height: 100%; background-size:cover">
+		<h1 style="font-size: 50px; color: black;">Найти 3 лишних детали по star vs the forces of evil</h1>
+		<h1 class="score" style="font-size: 50px; color: black">
+			0
+		</h1>
+		<h1 class="vremya" style="font-size: 50px; color: black">10</h1>
+		
+			<img src="butterfly.png" class="gg " style="margin-left: 9%; position: absolute; margin-top: 18%; width: 10%">
+			<img src="logo.png" class=" logo" style="margin-left: 1%; position: absolute; margin-top: 3%; width: 5%">
+			<img src="ded.png" class="ded " style="margin-left: 69%; position: absolute; margin-top: 15%; width: 18%">
+			<img src="ricardo.png" class="ricardo " style="margin-left: 30%; position: absolute; margin-top: 2; width: 11%">
+		
+			
+	
+			<button class="btn_star btn btn-success">Выйти из игры</button>
+			
+	</div>
+
+
+		<div class="hh" style="background-image:url('fon.png'); height: 100%;background-size:cover;display: none">
+
+			<h1 style="font-size: 40px; color: black;">Найти жука,фонарь и череп </h1>
+			<h1 class="score" style="font-size: 40px; color: black">
+			0
+			</h1>
+			<h1 class="vremya2" style="font-size: 50px; color: black">30</h1>
+
+		<img src="skull.png" class="dd " style="margin-left: 62%; position: absolute; margin-top: 4%; width: 2%">
+
+		<img src="bug.png" class="zz " style="margin-left: 90%; position: absolute; margin-top: 22%; width: 1%">
+		<img src="light.png" class="aa " style="margin-left: 15%; position: absolute; margin-top: 0%; width: 2%">
+
+		<button class="btn_star2 btn btn-success">Выйти из игры</button>
+	</div>
+	
+		<div class="ff" style="background-image: url('udied.png');height: 100%;background-size:cover;display: none">
+			 <button class="help btn_star btn btn-success">try again</button>
+			</div>
+		
+
+
+	<script type="text/javascript">
+		let point = 0;
+		let chislo1 = 10;
+		let chislo2 = 30;
+
+	document.querySelector(".help").onclick = function(){
+		document.querySelector(".step1").style.display = "block";
+		document.querySelector(".ff").style.display = "none";
+	}
+
+		//вход
+		document.querySelector(".door1").onclick = function(){
+			alert("Добро пожаловать в Svtfoe!");
+			document.querySelector(".step1").style.display = "none";
+			document.querySelector(".starvstheforcesofevil").style.display = "block"		
+		}
+		 document.querySelector(".door2").onclick = function(){
+		 	alert("пройди сначала первую лох");
+		 }
+		 document.querySelector(".door3").onclick = function(){
+		 	alert("че ты тут забыл а");
+		 }
+
+	
+
+		 //локация svtfoe
+		 	let interv = function(){
+		 		chislo1=chislo1 -1;
+		 		document.querySelector(".vremya").innerHTML = chislo1;
+
+		 		if(chislo1==0){
+		 		clearInterval(intervID);
+		 		document.querySelector(".ff").style.display = "block"
+		 		document.querySelector(".starvstheforcesofevil").style.display = "none"
+		 		}else{}
+		 	
+		 	}
+		 	let intervID =setInterval(interv,1000)
+		 
+
+		  document.querySelector(".gg").onclick = function(){
+		 	document.querySelector(".gg").style.display = "none"
+		 	point=point+1;
+		 	document.querySelector(".score").innerHTML = point;
+		 		if (point==3) {
+		  			document.querySelector(".sas").style.display = "none";
+		  			 document.querySelector(".hh").style.display = "block";
+		  			 alert("хаха молодца держи следующий уровень");
+		 	
+		  }else{
+
+		  }
+		}
+		 	
+		 
+		  document.querySelector(".ded").onclick = function(){
+		 	document.querySelector(".ded").style.display = "none"
+		 	point=point+1;
+		 	document.querySelector(".score").innerHTML = point;
+
+		 	if (point==3) {
+		  		document.querySelector(".starvstheforcesofevil").style.display = "none";
+		  	 	document.querySelector(".hh").style.display = "block";
+		  	 	 alert("хаха молодца держи следующий уровень");
+		  }else{
+
+		  }
+		 	
+		 }
+		  document.querySelector(".logo").onclick = function(){
+		 	document.querySelector(".logo").style.display = "none"
+		 	point=point+1;
+		 	document.querySelector(".score").innerHTML = point;
+
+		 if (point==3) {
+		  		document.querySelector(".starvstheforcesofevil").style.display = "none";
+		  		 document.querySelector(".hh").style.display = "block";
+		  		  alert("хаха молодца держи следующий уровень");
+		  }else{
+
+		  }
+		}
+		  document.querySelector(".ricardo").onclick = function(){
+		 	alert("хаха ржака но нет");
+
+		}
+		  document.querySelector(".btn_star").onclick = function(){
+		  	 document.querySelector(".starvstheforcesofevil").style.display = "none";
+		  	 document.querySelector(".step1").style.display = "block";
+
+		  }
+
+		//уровень2
+		let interv1 = function(){
+		 		chislo2=chislo2 -1;
+		 		document.querySelector(".vremya2").innerHTML = chislo2;
+
+		 		
+		 		if(chislo2==0){
+		 		clearInterval(interv1ID);
+		 		document.querySelector(".ff").style.display = "block"
+		 		document.querySelector(".hh").style.display = "none"
+		 		}else{}
+		 	}
+		 	let interv1ID =setInterval(interv1,1000)
+		 	
+
+				  document.querySelector(".zz").onclick = function(){
+		 	document.querySelector(".zz").style.display = "none"
+		 	point=point+1;
+		 	document.querySelector(".score").innerHTML = point;
+		 		if (point==3) {
+		  			document.querySelector(".hh").style.display = "none";
+		  			 document.querySelector(".").style.display = "block";
+		  			 alert("капец ты мощный");
+		  }else{
+
+		  }
+		 	
+		 }
+		  document.querySelector(".aa").onclick = function(){
+		 	document.querySelector(".aa").style.display = "none"
+		 	point=point+1;
+		 	document.querySelector(".score").innerHTML = point;
+
+		 	if (point==3) {
+		  		document.querySelector(".hh").style.display = "none";
+		  	 	document.querySelector(".").style.display = "block";
+		  	 	 alert("капец ты мощный");
+		  }else{
+
+		  }
+		 	
+		 }
+		  document.querySelector(".dd").onclick = function(){
+		 	document.querySelector(".dd").style.display = "none"
+		 	point=point+1;
+		 	document.querySelector(".score").innerHTML = point;
+
+		 if (point==3) {
+		  		document.querySelector(".hh").style.display = "none";
+		  		 document.querySelector(".").style.display = "block";
+		  		  alert("капец ты мощный");
+		  }else{
+
+		  }
+		}
+		 
+		  document.querySelector(".btn_star2").onclick = function(){
+		  	 document.querySelector(".hh").style.display = "none";
+		  	 document.querySelector(".step1").style.display = "block";
+
+		  }
+
+	</script>
+</body>
+</html>
